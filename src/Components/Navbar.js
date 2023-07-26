@@ -14,10 +14,10 @@ function Navbar() {
         </div>
         <div className={State===false?"links":'links1'}>
           <ul className={State===false?"ul":'ul1'}>
-            <li className={State===false?"link":'link1'}>home</li>
-            <li className={State===false?"link":'link1'}>about</li>
-            <li className={State===false?"link":'link1'}>service</li>
-            <li className={State===false?"link":'link1'}>contact</li>
+            <li className={State===false?"link":'link1'}>HOME</li>
+            <li className={State===false?"link":'link1'}>PRODUCTS</li>
+            <li className={State===false?"link":'link1'}>ABOUT</li>
+            <li className={State===false?"link":'link1'}>CONTACT</li>
           </ul>
         </div>
         <span className="menu-btn" onClick={()=>setState(!State)}><GrMenu/></span>
@@ -32,7 +32,7 @@ function Navbar() {
       
        
       </div>
-      <hr />
+      
     </div>
   );
   }
