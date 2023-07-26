@@ -1,0 +1,22 @@
+.products{
+    height: 200rem;
+}
+
+.latest-products{
+    font-family: "Arvo", serif;
+}
+.ctgry-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     font-family: "Arvo", serif;
+   
+}
+.card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cards{
+  
+}
