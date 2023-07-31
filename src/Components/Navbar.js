@@ -23,20 +23,28 @@ const Navbar = () => {
           <Link style={{ textDecoration: "none" }} to={"./product"}>
             <li className={state === false ? "list" : "list1"}>Products</li>
           </Link>
+          <Link style={{ textDecoration: "none" }} to={'/about'}>
           <li className={state === false ? "list" : "list1"}>About</li>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to={'/contact'}>
           <li className={state === false ? "list" : "list1"}>Contact</li>
+          </Link>
         </ul>
       </span>
       <span className={state === false ? "buttons" : "buttons1"}>
+        <Link style={{ textDecoration: "none" }} to={'/login'}>
         <button className={state === false ? "button1" : "button2"}>
           <BiLogIn />
           Login
         </button>
+        </Link>
+        <Link style={{ textDecoration: "none" }} to={'/register'}>
         <button className={state === false ? "button1" : "button2"}>
           <BsPersonFillAdd />
           Register
         </button>
-        <Link  to={"/cart"}>
+        </Link>
+        <Link style={{ textDecoration: "none" }}  to={"/cart"}   >
           <button className={state === false ? "button1" : "button2"}>
             <HiShoppingCart />
             Cart(0)

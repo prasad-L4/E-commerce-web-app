@@ -9,6 +9,11 @@ import Single from './Components/SingleProduct/Single';
 import SpecificCategory from './Components/SpecificCategory/SpecificCategory';
 import Home from './Pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AboutPage from './Components/AboutPage/AboutPage';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 
 function App() {
@@ -38,7 +43,10 @@ function App() {
     <Route path="/SpecificCategory/:names/:id" element={<Single addtocart={addtocart} />} />
     <Route path="/product/:names/:id" element={<Single addtocart={addtocart} />} />
     <Route path='/cart' element={<Cart CartItems={CartItems} Removefromcart={Removefromcart}/>}/>
-    
+    <Route path='/about' element={<About/>}/>
+    <Route path='/contact' element={<Contact/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/register' element={<Register/>}/>
     
 
     </Routes>

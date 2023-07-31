@@ -45,7 +45,9 @@ const Product = () => {
                 <Card.Body>
                   <Card.Title style={{textDecoration:'none'}}>{product.title}</Card.Title>
                   <Card.Text className="text-center fw-bold " >${product.price}</Card.Text>
+                 
                   <Button variant="primary ms-5">Buy Now</Button>
+                  
                 </Card.Body>
               </Card>
               </Link>
