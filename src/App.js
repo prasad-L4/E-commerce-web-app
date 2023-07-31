@@ -9,11 +9,12 @@ import Single from './Components/SingleProduct/Single';
 import SpecificCategory from './Components/SpecificCategory/SpecificCategory';
 import Home from './Pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutPage from './Components/AboutPage/AboutPage';
+
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>
+    <Route path='*' element={<ErrorPage/>}/>
     
 
     </Routes>
