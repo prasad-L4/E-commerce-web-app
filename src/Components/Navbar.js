@@ -1,40 +1,53 @@
-import React, { useState } from "react";
-import {AiOutlineLogin} from 'react-icons/ai'
-import "./Navbar.css";
-import {BsPersonFillAdd,BsCartFill} from 'react-icons/bs'
-import {GrMenu} from 'react-icons/gr'
-function Navbar() {
-  const [State, setState] = useState(false)
-  return (
-    <div>
-      <div className={State===false?'header':'header1'}>
+import "./Navbar.css"
+import {BiLogIn} from "react-icons/bi"
+import { BsPersonFillAdd } from "react-icons/bs";
+import {HiShoppingCart} from "react-icons/hi"
+import {GiHamburgerMenu} from "react-icons/gi"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-        <div className="brand">
-          <h1>BuyZen</h1>
-        </div>
-        <div className={State===false?"links":'links1'}>
-          <ul className={State===false?"ul":'ul1'}>
-            <li className={State===false?"link":'link1'}>HOME</li>
-            <li className={State===false?"link":'link1'}>PRODUCTS</li>
-            <li className={State===false?"link":'link1'}>ABOUT</li>
-            <li className={State===false?"link":'link1'}>CONTACT</li>
-          </ul>
-        </div>
-        <span className="menu-btn" onClick={()=>setState(!State)}><GrMenu/></span>
-        <div className={State===false?"buttons":'buttons1'}>
-          <button className={State===false?'login-btn':'login-btn1'}><AiOutlineLogin/>  Login</button>
-          <button className={State===false?"reg-btn":'reg-btn1'}><BsPersonFillAdd/>  Register</button>
-          <button className={State===false?"cart-btn":'cart-btn1'}><BsCartFill/>  Cart</button>
-         
-        </div>
-       
-       
-      
-       
-      </div>
-      
+const Navbar = () => {
+  const [state,setState]=useState(false);
+  
+ 
+  return (
+    <div className={state === false ? "navbar" : "navbar1"}>
+      <h1 className="logo">
+        <span className="s">S</span>tyle <span className="s">S</span>phere
+      </h1>
+      <span>
+        <ul className={state === false ? "totallist" : "totallist1"}>
+          <Link style={{ textDecoration: "none" }} to={"/"}>
+            <li className={state === false ? "list" : "list1"}>Home</li>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to={"./product"}>
+            <li className={state === false ? "list" : "list1"}>Products</li>
+          </Link>
+          <li className={state === false ? "list" : "list1"}>About</li>
+          <li className={state === false ? "list" : "list1"}>Contact</li>
+        </ul>
+      </span>
+      <span className={state === false ? "buttons" : "buttons1"}>
+        <button className={state === false ? "button1" : "button2"}>
+          <BiLogIn />
+          Login
+        </button>
+        <button className={state === false ? "button1" : "button2"}>
+          <BsPersonFillAdd />
+          Register
+        </button>
+        <Link  to={"/cart"}>
+          <button className={state === false ? "button1" : "button2"}>
+            <HiShoppingCart />
+            Cart(0)
+          </button>
+        </Link>
+      </span>
+      <span className="menubar" onClick={() => setState(!state)}>
+        <GiHamburgerMenu />
+      </span>
     </div>
   );
-  }
+};
 
 export default Navbar;

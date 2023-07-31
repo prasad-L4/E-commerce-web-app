@@ -1,5 +1,5 @@
 .products{
-    height: 200rem;
+    height: auto;
 }
 
 .latest-products{
@@ -16,7 +16,4 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-.cards{
-  
 }
